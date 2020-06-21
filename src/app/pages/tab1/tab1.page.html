@@ -6,4 +6,10 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true"> </ion-content>
+<ion-content [fullscreen]="true">
+    <ion-list>
+        <ion-item *ngFor="let lista of deseosService.listas">
+            <ion-label>{{lista.titulo}}</ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>
