@@ -23,6 +23,14 @@ export class DeseosService {
     return nuevaLista.id;
   }
 
+  obtenerlista(id: string | number) {
+    id = Number(id);
+
+    return this.listas.find((listaData) => {
+      return listaData.id === id;
+    });
+  }
+
   guardarStorage() {
     localStorage.setItem("data", JSON.stringify(this.listas));
   }
