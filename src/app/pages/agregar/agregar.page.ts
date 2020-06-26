@@ -46,10 +46,19 @@ export class AgregarPage implements OnInit {
     const pendientes = this.lista.items.filter(
       (itemData) => !itemData.completado
     ).length;
-
     // console.log("pendientes", pendientes);
-    console.log({ pendientes });
+    // console.log({ pendientes });
+    if (pendientes === 0) {
+      this.lista.terminadadaEn = new Date();
+      this.lista.terminada = true;
+    } else {
+      this.lista.terminadadaEn = null;
+      this.lista.terminada = false;
+    }
 
     this.deseosService.guardarStorage();
+
+    // Para verificar
+    console.log(this.deseosService.listas);
   }
 }
