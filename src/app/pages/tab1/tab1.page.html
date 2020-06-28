@@ -9,12 +9,12 @@
 <ion-content [fullscreen]="true" color="dark">
     <app-listas></app-listas>
 
-    <ion-list color="dark">
+    <!-- <ion-list color="dark">
         <ion-item color="dark" *ngFor="let lista of deseosService.listas" detail (click)="listaSeleccionada(lista)">
             <ion-label>{{lista.titulo}}</ion-label>
             <ion-note slot="end" color="danger">{{lista.items.length}} items</ion-note>
         </ion-item>
-    </ion-list>
+    </ion-list> -->
     <!-- fab placed to the top end -->
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
         <ion-fab-button color="danger" (click)="agregarLista()">
