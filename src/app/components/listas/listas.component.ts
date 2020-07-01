@@ -17,4 +17,9 @@ export class ListasComponent implements OnInit {
     console.log(lista);
     this.router.navigateByUrl(`/tabs/agregar/${lista.id}`);
   }
+
+  borrarLista(lista: Lista) {
+    this.deseosService.borrarLista(lista);
+    this.deseosService.guardarStorage();
+  }
 }
